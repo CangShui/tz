@@ -738,16 +738,17 @@ Install_ServerStatus_server(){
 	Save_iptables
 	echo -e "${Info} 所有步骤 安装完毕，开始启动了..."
 	Start_ServerStatus_server
-	rm -rf /home/index.html
-	rm -rf /home/css/hotaru_fix.css
-	rm -rf /home/diy.zip
-	wget -P /home https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/web/diy.zip
-	unzip /home/diy.zip -d /home
-	cp /home/index.html /usr/local/ServerStatus/web/index.html
-	cp /home/css/hotaru_fix.css /usr/local/ServerStatus/web/css/hotaru_fix.css
-	rm -rf /home/index.html
-	rm -rf /home/hotaru_fix.css
-	rm -rf /home/diy.zip
+	rm -rf /home/index.html > /dev/null 2>&1
+	rm -rf /home/css/hotaru_fix.css > /dev/null 2>&1
+	rm -rf /home/diy.zip > /dev/null 2>&1
+	wget -P /home https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/web/diy.zip  > /dev/null 2>&1
+	unzip /home/diy.zip -d /home > /dev/null 2>&1
+	cp /home/index.html /usr/local/ServerStatus/web/index.html > /dev/null 2>&1
+	cp /home/css/hotaru_fix.css /usr/local/ServerStatus/web/css/hotaru_fix.css > /dev/null 2>&1
+	rm -rf /home/index.html > /dev/null 2>&1
+	rm -rf /home/hotaru_fix.css > /dev/null 2>&1
+	rm -rf /home/diy.zip > /dev/null 2>&1
+	rm -rf ./start.sh > /dev/null 2>&1
 }
 Install_ServerStatus_client(){
 	[[ -e "${client_file}/status-client.py" ]] && echo -e "${Error} 检测到 ServerStatus 客户端已安装 !" && exit 1
@@ -998,9 +999,9 @@ echo && echo -e "  ServerStatus 一键安装管理脚本 ${Red_font_prefix}[v${s
   --    Modify by CokeMine    --
  ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
  ————————————
- ${Green_font_prefix} 1.${Font_color_suffix} 安装 客户端
- ${Green_font_prefix} 2.${Font_color_suffix} 更新 客户端
- ${Green_font_prefix} 3.${Font_color_suffix} 卸载 客户端
+ ${Green_font_prefix} 1.${Font_color_suffix} 安 客户端
+ ${Green_font_prefix} 2.${Font_color_suffix} 更 客户端
+ ${Green_font_prefix} 3.${Font_color_suffix} 卸 客户端
 ————————————
  ${Green_font_prefix} 4.${Font_color_suffix} 启动 客户端
  ${Green_font_prefix} 5.${Font_color_suffix} 停止 客户端
