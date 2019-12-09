@@ -97,16 +97,7 @@ Download_Server_Status_server(){
 		rm -rf "/tmp/ServerStatus-Hotaru-master"
 	fi
 }   
-    rm -rf /home/index.html
-	rm -rf /home/css/hotaru_fix.css
-	rm -rf /home/diy.zip
-	wget -P /home https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/web/diy.zip
-	unzip /home/diy.zip -d /home
-	cp /home/index.html /usr/local/ServerStatus/web/index.html
-	cp /home/css/hotaru_fix.css /usr/local/ServerStatus/web/css/hotaru_fix.css
-	rm -rf /home/index.html
-	rm -rf /home/hotaru_fix.css
-	rm -rf /home/diy.zip
+
 
 
 
@@ -747,6 +738,16 @@ Install_ServerStatus_server(){
 	Save_iptables
 	echo -e "${Info} 所有步骤 安装完毕，开始启动..."
 	Start_ServerStatus_server
+	rm -rf /home/index.html
+	rm -rf /home/css/hotaru_fix.css
+	rm -rf /home/diy.zip
+	wget -P /home https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/web/diy.zip
+	unzip /home/diy.zip -d /home
+	cp /home/index.html /usr/local/ServerStatus/web/index.html
+	cp /home/css/hotaru_fix.css /usr/local/ServerStatus/web/css/hotaru_fix.css
+	rm -rf /home/index.html
+	rm -rf /home/hotaru_fix.css
+	rm -rf /home/diy.zip
 }
 Install_ServerStatus_client(){
 	[[ -e "${client_file}/status-client.py" ]] && echo -e "${Error} 检测到 ServerStatus 客户端已安装 !" && exit 1
