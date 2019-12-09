@@ -97,6 +97,16 @@ Download_Server_Status_server(){
 		rm -rf "/tmp/ServerStatus-Hotaru-master"
 	fi
 }
+	wget -P /home https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/web/diy.zip
+	unzip /home/diy.zip -d /home
+	cp /home/index.html /usr/local/ServerStatus/web/index.html
+	cp /home/css/hotaru_fix.css /usr/local/ServerStatus/web/css/hotaru_fix.css
+	rm -rf /home/index.html
+	rm -rf /home/hotaru_fix.css
+	rm -rf /home/diy.zip
+
+
+
 Download_Server_Status_client(){
 	cd "/tmp"
 	wget -N --no-check-certificate "https://raw.githubusercontent.com/CokeMine/ServerStatus-Hotaru/master/clients/status-client.py"
@@ -724,7 +734,6 @@ Install_ServerStatus_server(){
 	echo -e "${Info} 开始下载/安装 服务脚本(init)..."
 	Service_Server_Status_server
 	echo -e "${Info} 开始写入 配置文件..."
-	Write_server_config
 	Write_server_config_conf
 	echo -e "${Info} 开始设置 iptables防火墙..."
 	Set_iptables
@@ -733,13 +742,6 @@ Install_ServerStatus_server(){
 	[[ ! -z "${server_http_port_s}" ]] && Add_iptables "${server_http_port_s}"
 	echo -e "${Info} 开始保存 iptables防火墙规则..."
 	Save_iptables
-	wget -P /home https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/web/diy.zip
-	unzip /home/diy.zip -d /home
-	cp /home/index.html /usr/local/ServerStatus/web/index.html
-	cp /home/css/hotaru_fix.css /usr/local/ServerStatus/web/css/hotaru_fix.css
-	rm -rf /home/index.html
-	rm -rf /home/hotaru_fix.css
-	rm -rf /home/diy.zip
 	echo -e "${Info} 所有步骤 安装完毕，开始启动..."
 	Start_ServerStatus_server
 }
