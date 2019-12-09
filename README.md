@@ -1,6 +1,8 @@
 ## 安装方法
 服务端
 wget https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/status.sh && bash status.sh s
+
+
 1、选择1，配置服务端
 
 2、没什么需求的话，端口建议默认就好
@@ -18,6 +20,7 @@ wget https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/statu
 7、删除（修改）服务端：选7后在选择
 
 客户端
+
 wget https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/status.sh && bash status.sh c
 
 
