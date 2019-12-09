@@ -1,21 +1,25 @@
-# ServerStatus-Hotaru
-云探针、多服务器探针、云监控、多服务器云监控
-
-基于ServerStatus-Toyo最新版本稍作修改，不太会脚本什么的，前端也垃圾。见谅
-
-Test v0.014：图片来源：Pixiv：72725286
-
-## 特性
-
-模板来自：<https://www.hostloc.com/thread-494384-1-1.html>
-
-稍作修改。
-
-多了个Region调用国旗。所以用原来Toyo版的需要稍作修改
-
 ## 安装方法
+服务端
+wget https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/status.sh && bash status.sh s
+1、选择1，配置服务端
 
-请见：https://www.cokemine.com/serverstatus-hotaru.html
+2、没什么需求的话，端口建议默认就好
+
+3、如果本地没装别的如Nginx或者Apache之类的，直接Y就好
+
+4、绑定域名或IP访问
+
+5、端口自主选择
+
+6、添加客户端：选择7后选1
+
+剩下的信息自己填就好了
+
+7、删除（修改）服务端：选7后在选择
+
+客户端
+wget https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/status.sh && bash status.sh c
+
 
 ## 修改方法
 
@@ -25,17 +29,3 @@ Test v0.014：图片来源：Pixiv：72725286
 
 卸载ServerStatus-Toyo安装ServerStatus-Hotaru替换配置文件，重启ServerStatus
 
-## 效果演示
-
-![](https://i.loli.net/2019/04/05/5ca74fb05338f.png)
-
-![](https://i.loli.net/2019/04/05/5ca74fc86db96.png)
-
-当然前端可以自己自定义。
-
-## 相关开源项目 ： 
-* ServerStatus-Toyo：https://github.com/ToyoDAdoubiBackup/ServerStatus-Toyo
-* ServerStatus：https://github.com/BotoX/ServerStatus
-* mojeda: https://github.com/mojeda 
-* mojeda's ServerStatus: https://github.com/mojeda/ServerStatus
-* BlueVM's project: http://www.lowendtalk.com/discussion/comment/169690#Comment_169690
