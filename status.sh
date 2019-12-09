@@ -96,7 +96,10 @@ Download_Server_Status_server(){
 		[[ -e "${server_file}/sergate1" ]] && rm -rf "${server_file}/sergate1"
 		rm -rf "/tmp/ServerStatus-Hotaru-master"
 	fi
-}
+}   
+    rm -rf /home/index.html
+	rm -rf /home/css/hotaru_fix.css
+	rm -rf /home/diy.zip
 	wget -P /home https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/web/diy.zip
 	unzip /home/diy.zip -d /home
 	cp /home/index.html /usr/local/ServerStatus/web/index.html
