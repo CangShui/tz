@@ -1,3 +1,5 @@
+<img src="https://i.loli.net/2019/12/19/ODw38zWdHf5FTAj.png" />
+
 ## 安装方法
 服务端
 
