@@ -68,33 +68,33 @@ Download_Server_Status_server(){
 	[[ ! -e "master.zip" ]] && echo -e "${Error} ServerStatus 服务端下载失败 !" && exit 1
 	unzip master.zip
 	rm -rf master.zip
-	[[ ! -e "/tmp/tz" ]] && echo -e "${Error} ServerStatus 服务端解压失败 !" && exit 1
-	cd "/tmp/tz/server"
+	[[ ! -e "/tmp/tz-master" ]] && echo -e "${Error} ServerStatus 服务端解压失败 !" && exit 1
+	cd "/tmp/tz-master/server"
 	make
-	[[ ! -e "sergate" ]] && echo -e "${Error} ServerStatus 服务端编译失败 !" && cd "${file_1}" && rm -rf "/tmp/tz" && exit 1
+	[[ ! -e "sergate" ]] && echo -e "${Error} ServerStatus 服务端编译失败 !" && cd "${file_1}" && rm -rf "/tmp/tz-master" && exit 1
 	cd "${file_1}"
 	[[ ! -e "${file}" ]] && mkdir "${file}"
 	if [[ ! -e "${server_file}" ]]; then
 		mkdir "${server_file}"
-		mv "/tmp/tz/server/sergate" "${server_file}/sergate"
-		mv "/tmp/tz/web" "${web_file}"
+		mv "/tmp/tz-master/server/sergate" "${server_file}/sergate"
+		mv "/tmp/tz-master/web" "${web_file}"
 	else
 		if [[ -e "${server_file}/sergate" ]]; then
 			mv "${server_file}/sergate" "${server_file}/sergate1"
-			mv "/tmp/tz/server/sergate" "${server_file}/sergate"
+			mv "/tmp/tz-master/server/sergate" "${server_file}/sergate"
 		else
-			mv "/tmp/tz/server/sergate" "${server_file}/sergate"
-			mv "/tmp/tz/web" "${web_file}"
+			mv "/tmp/tz-master/server/sergate" "${server_file}/sergate"
+			mv "/tmp/tz-master/web" "${web_file}"
 		fi
 	fi
 	if [[ ! -e "${server_file}/sergate" ]]; then
 		echo -e "${Error} ServerStatus 服务端移动重命名失败 !"
 		[[ -e "${server_file}/sergate1" ]] && mv "${server_file}/sergate1" "${server_file}/sergate"
-		rm -rf "/tmp/tz"
+		rm -rf "/tmp/tz-master"
 		exit 1
 	else
 		[[ -e "${server_file}/sergate1" ]] && rm -rf "${server_file}/sergate1"
-		rm -rf "/tmp/tz"
+		rm -rf "/tmp/tz-master"
 	fi
 }
 Download_Server_Status_client(){
