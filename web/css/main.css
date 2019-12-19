@@ -1,12 +1,16 @@
-
 body.navbar-open {
 	overflow: hidden;
 }
 
-/* 1.2 General: Typography */
-body {
-        font-family: "Microsoft YaHei",微软雅黑,'icons';
-    }
+body{
+   font-family: "Raleway", "微软雅黑", Helvetica, Arial, sans-serif;
+   background: linear-gradient(to right,#5125d0,#ff4961);
+}
+
+img{
+  height:40px;
+  margin-right:5%;
+}
 .desc {
   font-size: 16px;
   line-height: 28px;
@@ -27,6 +31,49 @@ a {
   margin: 0;
   padding: 24px 0;
 }
+
+.container{
+  background-color:#fff;
+  margin-top:10%;
+  padding: 32px 30px;
+  box-shadow: 0px 4px 25px 0px #00000050;
+  overflow: overlay;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd){
+  background-color:#fff;
+}
+
+div#rt0{
+  text-align: right;
+}
+
+div#updated{
+  font-weight: 600;
+  font-size: 13px;
+}
+
+div#rt5{
+  text-align: right;
+}
+
+.page-section{
+  margin-bottom: 10%;
+}
+
+p.network{
+  color:#ff586b;
+  font-size:15px;
+  font-weight:500;
+}
+
+p.online{
+  color:#ff586b;
+  font-size:13px;
+  font-weight:500;
+  display: inline-block;
+}
+
 
 /* 1.3 General: Helpers */
 
@@ -1700,11 +1747,6 @@ note: moved to layout
 
 /* 3.1 Section: General */
 
-.page-section {
-	padding-top: 48px;
-	padding-bottom: 55px;
-	border-bottom: 1px solid #edeff2;
-}
 .page-section:last-child {
 	border: none;
 }
@@ -3735,7 +3777,7 @@ a.package:hover {
 /* 3.15 Section: Server Status */
 
 .location-header {
-	padding: 0 0 20px 0;
+	padding: 0 0 10px 0;
 }
 .location-header h4,
 .location-header .h4 {
@@ -3743,12 +3785,12 @@ a.package:hover {
 }
 .location-header h4 small,
 .location-header .h4 small {
-	display: block;
 	padding: 3px 0 0 0;
 	color: #919699;
 	font-size: 12px;
-  font-weight: 300;
+    font-weight: 300;
 	text-transform: none;
+  	margin-left:5%;
 }
 .location-header .flag {
 	float: left;
@@ -3778,16 +3820,16 @@ a.package:hover {
 	margin: 0 0 15px 0;
 }
 .progress {
-	background-color: #d5dade;
+	background-color: #e2e2e2;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 .progress-bar {
-	background:linear-gradient(to right, #44ce78 0%,#43ce9f 100%)!important;
+	background:#00da7b!important;
 }
 
 .progress-bar-danger{
-  background: #d9534f!important;
+  background:#ff586b!important;
 }
 .location-btn {
   position: absolute;
@@ -4126,15 +4168,15 @@ a.panel-location.location-warning:hover .location-btn {
 /* 4.4 Component: Table */
 
 .table {
-  font-size: 0.9rem;
-  font-weight: 800;
+    font-size: 0.9rem;
+    font-weight: 800;
 }
 .table small {
-		padding-top: 4px;
-		display: block;
+    display: block;
+  	padding:3px;
 }
 .table b {
-		color: #2b3033;
+	color: #2b3033;
 }
 .table > thead > tr > th:first-child,
 .table > tbody > tr > td:first-child,
