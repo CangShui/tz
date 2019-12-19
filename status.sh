@@ -735,16 +735,6 @@ Install_ServerStatus_server(){
 	Save_iptables
 	echo -e "${Info} 服务端所有步骤 安装完毕，开始启动..."
 	Start_ServerStatus_server
-	rm -rf /home/index.html > /dev/null 2>&1
-	rm -rf /home/css/hotaru_fix.css > /dev/null 2>&1
-	rm -rf /home/diy.zip > /dev/null 2>&1
-	wget -P /home https://raw.githubusercontent.com/CangShui/ServerStatus-Hotaru/master/web/diy.zip  > /dev/null 2>&1
-	unzip /home/diy.zip -d /home > /dev/null 2>&1
-	cp /home/index.html /usr/local/ServerStatus/web/index.html > /dev/null 2>&1
-	cp /home/css/hotaru_fix.css /usr/local/ServerStatus/web/css/hotaru_fix.css > /dev/null 2>&1
-	rm -rf /home/index.html > /dev/null 2>&1
-	rm -rf /home/hotaru_fix.css > /dev/null 2>&1
-	rm -rf /home/diy.zip > /dev/null 2>&1
 	rm -rf ./start.sh > /dev/null 2>&1
 }
 Install_ServerStatus_client(){
