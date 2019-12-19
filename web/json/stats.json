@@ -1,0 +1,11 @@
+{
+"servers": [
+{ "name": "美国洛杉矶 CN2 GIA", "type": "KVM", "host": "None", "location": "US", "online4": true, "online6": false, "uptime": "48 天", "load": 1.00, "network_rx": 5093, "network_tx": 1818, "network_in": 387798853795, "network_out": 362620817819, "cpu": 0, "memory_total": 486524, "memory_used": 174860, "swap_total": 511996, "swap_used": 36864, "hdd_total": 14559, "hdd_used": 3412, "custom": "" },
+{ "name": "New York - 美国纽约", "type": "KVM", "host": "None", "location": "US", "online4": false, "online6": false },
+{ "name": "Korea - 韩国", "type": "KVM", "host": "None", "location": "KR", "online4": true, "online6": false, "uptime": "8 天", "load": 0.00, "network_rx": 2577, "network_tx": 2620, "network_in": 3399548986, "network_out": 3229083110, "cpu": 1, "memory_total": 402544, "memory_used": 306620, "swap_total": 0, "swap_used": 0, "hdd_total": 34668, "hdd_used": 2636, "custom": "" },
+{ "name": "Japan - 日本", "type": "KVM", "host": "None", "location": "JP", "online4": true, "online6": false, "uptime": "80 天", "load": 4.00, "network_rx": 15791, "network_tx": 16281, "network_in": 839992622684, "network_out": 834436618562, "cpu": 0, "memory_total": 490476, "memory_used": 178548, "swap_total": 0, "swap_used": 0, "hdd_total": 20469, "hdd_used": 3371, "custom": "" },
+{ "name": "HongKong - 香港", "type": "KVM", "host": "None", "location": "HK", "online4": true, "online6": false, "uptime": "32 天", "load": 2.00, "network_rx": 53491, "network_tx": 53715, "network_in": 438937498405, "network_out": 415914151704, "cpu": 0, "memory_total": 1008920, "memory_used": 308296, "swap_total": 0, "swap_used": 0, "hdd_total": 40188, "hdd_used": 3708, "custom": "" },
+{ "name": "Singapore - 新加坡", "type": "KVM", "host": "None", "location": "SG", "online4": true, "online6": false, "uptime": "1 天", "load": 6.00, "network_rx": 189283, "network_tx": 183308, "network_in": 12480883527, "network_out": 12198035527, "cpu": 1, "memory_total": 1008984, "memory_used": 223048, "swap_total": 0, "swap_used": 0, "hdd_total": 40188, "hdd_used": 2580, "custom": "" }
+],
+"updated": "1557303239"
+}
